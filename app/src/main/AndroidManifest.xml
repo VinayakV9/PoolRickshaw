@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.mca16.set.poolrickshaw">
+
+    <application
+        android:name=".MainActivity"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--<activity-->
+            <!--android:name=".MainActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity android:name="co.chatsdk.ui.login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="google_web_client_id" android:value="@string/google_web_client_id" />
+
+        <!--Contact Book-->
+        <meta-data android:name="contact_book_invite_contact_email_subject" android:value="@string/contact_book_email_subject" />
+        <meta-data android:name="contact_book_invite_contact_email_body" android:value="@string/contact_book_email_body" />
+        <meta-data android:name="contact_book_invite_contact_sms_body" android:value="@string/contact_book_sms_body" />
+        <!--<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_identifier"/>-->
+
+    </application>
+
+</manifest>

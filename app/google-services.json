@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "189993601521",
+    "firebase_url": "https://poolrickshaw.firebaseio.com",
+    "project_id": "poolrickshaw",
+    "storage_bucket": "poolrickshaw.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189993601521:android:d1bc29cc2f2b8541",
+        "android_client_info": {
+          "package_name": "org.mca16.set.poolrickshaw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189993601521-6m3le8uur2n9poj7ahh9jkrf6a993160.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXwqpcfqWyUJgWqEUjccppSnStJCUBckQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

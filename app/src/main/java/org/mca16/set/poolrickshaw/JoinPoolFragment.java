@@ -15,6 +15,8 @@ import co.chatsdk.core.session.ChatSDK;
 import co.chatsdk.ui.main.BaseFragment;
 import co.chatsdk.ui.profile.ProfileFragment;
 import java.util.*;
+
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -59,6 +61,14 @@ public class JoinPoolFragment extends BaseFragment {
         super.onCreateView(inflater, container, savedInstanceState);
         mainView = inflater.inflate(R.layout.fragment_join_pool, null);
 
+        Button button = mainView.findViewById(R.id.join_pool_submit);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onSearchPressed();
+            }
+        });
         return mainView;
     }
 }

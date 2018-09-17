@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/dialog_create_chat_room_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/dialog_create_chat_room_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/source_station"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/dialog_create_chat_room_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/destination_station"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/dialog_create_chat_room_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:hint="de"
+        android:inputType="number"
+        android:text="1"/>
+
+</LinearLayout>

@@ -1,8 +1,6 @@
 package org.mca16.set.poolrickshaw;
 
 import co.chatsdk.core.dao.Thread;
-import co.chatsdk.core.dao.ThreadMetaValue;
-import co.chatsdk.core.dao.User;
 
 public class ChatRoom{
     private Thread mThread;
@@ -21,19 +19,28 @@ public class ChatRoom{
     }
 
     public String getSource(){
+        if( mThread.metaValueForKey(META_SOURCE_KEY) == null )
+            return "";
+
         return mThread.metaValueForKey(META_SOURCE_KEY).getValue();
     }
 
     public String getDestination(){
+        if( mThread.metaValueForKey(META_DESTINATION_KEY) == null )
+            return "";
+
         return mThread.metaValueForKey(META_DESTINATION_KEY).getValue();
     }
 
     public int getCapacity(){
+        if( mThread.metaValueForKey(META_CAPACITY_KEY) == null )
+            return 0;
+
         return Integer.parseInt( mThread.metaValueForKey(META_CAPACITY_KEY).getValue() );
     }
 
     public int getSize(){
-        return Integer.parseInt( mThread.metaValueForKey(META_SIZE_KEY).getValue() );
+        return this.mThread.getUsers().size();
     }
 
     public void setSource(String sourceStation){

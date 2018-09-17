@@ -54,20 +54,14 @@ public class MainActivity extends MultiDexApplication {
         config.googleLoginEnabled(true);
         config.locationMessagesEnabled(false);
         try {
-            ChatSDK.initialize(config.build(), new BaseInterfaceAdapter(context), new FirebaseNetworkAdapter());
+            ChatSDK.initialize(config.build(), new PoolRickshawBaseInterfaceAdapter(context), new FirebaseNetworkAdapter());
         } catch (ChatSDKException e) {
 
         }
 
-        Log.d("Thread","All Threads");
-        for( Thread thread : ChatSDK.thread().getThreads(1)){
-
-            Log.d("Thread","--------Name:"+thread.getName()+"-----EntityId:"+thread.getEntityID()+"-------");
-        }
         FirebaseFileStorageModule.activate();
         FirebasePushModule.activateForFirebase();
-//        FirebaseUIModule.activate(context, EmailAuthProvider.PROVIDER_ID, PhoneAuthProvider.PROVIDER_ID);
-
+//      FirebaseUIModule.activate(context, EmailAuthProvider.PROVIDER_ID, PhoneAuthProvider.PROVIDER_ID);
     }
 
     @Override

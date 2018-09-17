@@ -49,7 +49,7 @@ public class MainActivity extends MultiDexApplication {
 //        builder.firebaseRootPath("firebase_v4_web_new_4");
         config.firebaseRootPath("prod");
 //        config.firebaseCloudMessagingServerKey("AAAALDyASfE:APA91bFbxQiL3Y6yT1jNgfjglpXOpLjWa7kv2k-_Pt9JoKZ_WHx8MBtCGFJgqUofJnYRoxvqUaC3TATYdqeDhLoylSsH2Esquy3VuCOqbNHehuUdMu7l2NDMiEZGGLrCCozANzOdzk64");
-        config.publicRoomCreationEnabled(false);
+        config.publicRoomCreationEnabled(true);
 
         config.pushNotificationSound("default");
         config.facebookLoginEnabled(false);

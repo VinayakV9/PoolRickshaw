@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.facebook.internal.Logger;
 
@@ -35,6 +36,8 @@ import io.reactivex.Observable;
 import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class MainActivity extends MultiDexApplication {
+
+
 
     public void onCreate() {
         super.onCreate();

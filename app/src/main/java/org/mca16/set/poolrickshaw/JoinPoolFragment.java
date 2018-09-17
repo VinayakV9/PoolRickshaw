@@ -11,24 +11,36 @@ import android.view.ViewGroup;
 
 import co.chatsdk.core.dao.Thread;
 import co.chatsdk.core.dao.User;
+import co.chatsdk.core.interfaces.ThreadType;
 import co.chatsdk.core.session.ChatSDK;
 import co.chatsdk.ui.main.BaseFragment;
 import co.chatsdk.ui.profile.ProfileFragment;
 import java.util.*;
+
+import android.widget.Button;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class JoinPoolFragment extends BaseFragment {
+
+
+
+
 
     @Override
     public void clearData() {
 
     }
 
-    public void onSearchPressed(){
-        for( Thread thread : ChatSDK.thread().getThreads(1)){
-            TextView sourceTextView = getActivity().findViewById(R.id.join_pool_source_station);
-            TextView destinationTextView = getActivity().findViewById(R.id.join_pool_destination_station);
+    public void onSearchPressed(View view){
+        Log.d("search pressed tag", "search button pressed");
+        for( Thread thread : ChatSDK.thread().getThreads(ThreadType.Public)){
+            Log.d("search pressed tag", "srch btn pressed, inside for");
+
+            TextView sourceTextView = (TextView) getView().findViewById(R.id.join_pool_source_station);
+            TextView destinationTextView = (TextView) getView().findViewById(R.id.join_pool_destination_station);
 
 
 
@@ -37,8 +49,7 @@ public class JoinPoolFragment extends BaseFragment {
             Log.d("source entered", sourceEntered);
             Log.d("destination entered", destinationEntered);
 
-
-            Log.d("Thread","--------Name:"+thread.getName()+"-----EntityId:"+thread.getEntityID()+"-------");
+            //Log.d("Thread","--------Name:"+thread.getName()+"-----EntityId:"+thread.getEntityID()+"-------");
         }
     }
 
@@ -56,8 +67,20 @@ public class JoinPoolFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         super.onCreateView(inflater, container, savedInstanceState);
         mainView = inflater.inflate(R.layout.fragment_join_pool, null);
+
+        Button button=mainView.findViewById(R.id.join_pool_submit);
+
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                onSearchPressed(view);
+            }
+        });
 
         return mainView;
     }

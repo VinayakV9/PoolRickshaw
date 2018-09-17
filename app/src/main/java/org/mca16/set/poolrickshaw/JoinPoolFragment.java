@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import co.chatsdk.core.dao.Thread;
 import co.chatsdk.core.dao.User;
+import co.chatsdk.core.interfaces.ThreadType;
 import co.chatsdk.core.session.ChatSDK;
 import co.chatsdk.ui.main.BaseFragment;
 import co.chatsdk.ui.profile.ProfileFragment;
@@ -28,7 +29,7 @@ public class JoinPoolFragment extends BaseFragment {
     }
 
     public void onSearchPressed(){
-        for( Thread thread : ChatSDK.thread().getThreads(1)){
+        for( Thread thread : ChatSDK.thread().getThreads(ThreadType.Public)){
             TextView sourceTextView = getActivity().findViewById(R.id.join_pool_source_station);
             TextView destinationTextView = getActivity().findViewById(R.id.join_pool_destination_station);
 
@@ -40,7 +41,7 @@ public class JoinPoolFragment extends BaseFragment {
             Log.d("destination entered", destinationEntered);
 
 
-            Log.d("Thread","--------Name:"+thread.getName()+"-----EntityId:"+thread.getEntityID()+"-------");
+           // Log.d("Thread","--------Name:"+thread.getName()+"-----EntityId:"+thread.getEntityID()+"-------");
         }
     }
 

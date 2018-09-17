@@ -15,6 +15,7 @@ import co.chatsdk.core.session.ChatSDK;
 import co.chatsdk.ui.main.BaseFragment;
 import co.chatsdk.ui.profile.ProfileFragment;
 import java.util.*;
+import android.widget.TextView;
 
 
 public class JoinPoolFragment extends BaseFragment {
@@ -26,6 +27,15 @@ public class JoinPoolFragment extends BaseFragment {
 
     public void onSearchPressed(){
         for( Thread thread : ChatSDK.thread().getThreads(1)){
+            TextView sourceTextView = getActivity().findViewById(R.id.join_pool_source_station);
+            TextView destinationTextView = getActivity().findViewById(R.id.join_pool_destination_station);
+
+
+
+            String sourceEntered = sourceTextView.getText().toString();
+            String destinationEntered = destinationTextView.getText().toString();
+            Log.d("source entered", sourceEntered);
+            Log.d("destination entered", destinationEntered);
 
 
             Log.d("Thread","--------Name:"+thread.getName()+"-----EntityId:"+thread.getEntityID()+"-------");
